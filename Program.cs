@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParProgrammering2
 {
@@ -42,34 +37,28 @@ namespace ParProgrammering2
 
         static void Main(string[] args)
         {
-            List<MovieInfo> listOfMovies = new List<MovieInfo>();
-            string answer = "j";
-            string title = "";
-            string year = "";
-            string description = "";
-            string director = "";
-            string actor1 = "";
-            string actor2 = "";
+            var listOfMovies = new List<MovieInfo>();
+            string answer = "";
 
             while (answer.ToLower() != "n")
             {
                 Console.Write("Hva er film tittelen? ");
-                title = Console.ReadLine();
+                string title = Console.ReadLine();
                 Console.Write("Når ble filmen sluppet? ");
-                year = Console.ReadLine();
+                string year = Console.ReadLine();
                 Console.Write("Hva handler filmen om? ");
-                description = Console.ReadLine();
+                string description = Console.ReadLine();
                 Console.Write("Hvem er regissør? ");
-                director = Console.ReadLine();
-                Console.Write("Hvem har hovedrollen?");
-                actor1 = Console.ReadLine();
-                Console.Write("Hvem har den andre hovedrollen?");
-                actor2 = Console.ReadLine();
+                string director = Console.ReadLine();
+                Console.Write("Hvem har hovedrollen? ");
+                string actor1 = Console.ReadLine();
+                Console.Write("Hvem har den andre hovedrollen? ");
+                string actor2 = Console.ReadLine();
 
                 listOfMovies.Add(new MovieInfo(title, year, description, director, actor1, actor2));
 
                 Console.WriteLine();
-                Console.Write("Vil du legge til en ny film (J/N) ?");
+                Console.Write("Vil du legge til en ny film (J/N) ? ");
                 answer = Console.ReadLine();
 
                 Console.WriteLine();
